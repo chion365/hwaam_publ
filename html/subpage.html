@@ -53,9 +53,12 @@
                                     입니다. 화암마을의 자연을 즐기기 위해 <br>
                                     몰운대와 화표주에 구름과 함께 내려옵니다.
                                 </p>
-                                <figure>
+                                <!-- <figure>
                                     <img src="../resource/images/img_card01.png" alt="">
-                                </figure>
+                                </figure> -->
+                                <div class="wrap-video">
+                                    <video src="../resource/images/@video01.mp4" autoplay muted loop></video>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -66,9 +69,12 @@
                                     지키는 수호신입니다. 부정한 사람이 <br>
                                     광대곡에 들어오면 뱀을 변해 쫓아냅니다.
                                 </p>
-                                <figure>
+                                <!-- <figure>
                                     <img src="../resource/images/img_card02.png" alt="">
-                                </figure>
+                                </figure> -->
+                                <div class="wrap-video">
+                                    <video src="../resource/images/@video02.mp4" autoplay muted loop></video>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -78,9 +84,12 @@
                                     사람들의 욕심으로부터 화암약수를 지키는 <br>
                                     수호신입니다. 욕심을 가진 사람이 화암약수에 오면 물 속에 나 타나서 쫓아냅니다.
                                 </p>
-                                <figure>
+                                <!-- <figure>
                                     <img src="../resource/images/img_card03.png" alt="">
-                                </figure>
+                                </figure> -->
+                                <div class="wrap-video">
+                                    <video src="../resource/images/@video03.mp4" autoplay muted loop></video>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -159,6 +168,25 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            on: {
+                slideChange: function() {
+                    // 이전에 재생 중인 동영상 초기화
+                    var previousSlide = swiper.slides[swiper.previousIndex];
+                    var previousVideo = previousSlide.querySelector('video');
+                    if (previousVideo) {
+                        previousVideo.currentTime = 0; // 비디오를 처음으로 되감습니다.
+                        previousVideo.pause(); // 재생을 멈춥니다.
+                    }
+
+                    // 현재 활성화된 슬라이드의 동영상 재생
+                    var activeSlide = swiper.slides[swiper.activeIndex];
+                    var video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.currentTime = 0; // 비디오를 처음으로 되감습니다.
+                        video.play(); // 재생을 시작합니다.
+                    }
+                }    
+            }
         });
     </script>
 </body>

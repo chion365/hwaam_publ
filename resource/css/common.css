@@ -74,7 +74,7 @@ a:active {color:inherit;}
 .card-swiper .card .text {margin:1.2rem auto 0;width:22.8rem;font-size: 1.2rem;}
 .card-swiper .card img {width:100%;}
 .card-swiper .wrap-video {margin:1.6rem auto;width:22.8rem;height:20.8rem;}
-.card-swiper .wrap-video video {width:100%;}
+.card-swiper .wrap-video video {width:100%;height:100%;}
 .card-swiper .swiper-pagination-bullet {border-radius:.8rem;width:1.6rem;height:.8rem;background-color:#fff;}
 .card-swiper .swiper-pagination-bullet-active {width:2.6rem;}
 .card-swiper .swiper-pagination {position:relative;margin-top:4rem;}
