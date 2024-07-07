@@ -53,12 +53,9 @@
                                     입니다. 화암마을의 자연을 즐기기 위해 <br>
                                     몰운대와 화표주에 구름과 함께 내려옵니다.
                                 </p>
-                                <div class="wrap-video">
-                                    <video src="../resource/images/@video01.mp4" autoplay controls="false" muted></video>
-                                </div>
-                                <!-- <figure>
+                                <figure>
                                     <img src="../resource/images/img_card01.png" alt="">
-                                </figure> -->
+                                </figure>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -69,12 +66,9 @@
                                     지키는 수호신입니다. 부정한 사람이 <br>
                                     광대곡에 들어오면 뱀을 변해 쫓아냅니다.
                                 </p>
-                                <div class="wrap-video">
-                                    <video src="../resource/images/@video02.mp4" autoplay controls="false" muted></video>
-                                </div>
-                                <!-- <figure>
+                                <figure>
                                     <img src="../resource/images/img_card02.png" alt="">
-                                </figure> -->
+                                </figure>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -165,20 +159,6 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            on: {
-                slideChangeTransitionStart: function () {
-                var videos = document.querySelectorAll('video');
-                videos.forEach(function(video) {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-                var activeSlide = this.slides[this.activeIndex];
-                var videoInActiveSlide = activeSlide.querySelector('video');
-                if (videoInActiveSlide) {
-                    videoInActiveSlide.play();
-                }
-                }
-            }
         });
     </script>
 </body>
